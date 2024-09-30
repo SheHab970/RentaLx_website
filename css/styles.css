@@ -1,0 +1,600 @@
+
+/* =================================================== Start Global css =======================================================  */
+ *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ }
+ html{
+  scroll-behavior: smooth;
+ }
+ body{
+  height: 1500px;
+ }
+ :root{
+   --Icons_color: #fe5b3e;
+   --gradint: linear-gradient(to bottom ,#fe5c3c, #fc8023);
+   --box_shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+ }
+body{
+  font-family: "Kanit", sans-serif;
+}
+ p{
+  font-size: 17px;
+  color: rgb(125, 125, 125);
+}
+ .container{
+  max-width:1200px;
+  margin: auto;
+  padding: 10px;
+ }
+ a{
+  text-decoration: none;
+  color: black;
+ }
+ .header-section{
+  font-size:40px ;
+  font-weight: 900;
+ }
+ .card{
+  background-color: #ebebeb;
+  color: var(--Icons_color);
+  font-size: 30px;
+  border: 4px solid rgb(255, 255, 255) ;
+  width: 69px;
+  height: 58px;
+  box-shadow: var(--box_shadow);
+  border-radius:5px ;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ 
+ .text-capitalize{
+  text-transform: capitalize;
+ }
+
+.text-center{
+  text-align: center;
+  margin-top: 75px;
+}
+ ul li{
+  list-style: none;
+  padding: 0;
+ }
+
+ .flex{
+  display: flex;
+ }
+ hr{
+  border: 1px solid rgb(105, 105, 105);
+ }
+ /* ================================================= End Global css =====================================================  */
+
+ /* ============================================== Start navbar section =================================================  */
+ header{
+   background: linear-gradient(to bottom,#ffffff,rgba(255, 106, 0, 0.622));
+ }
+ .nav_container{
+  padding: 20px 10px;
+  font-size: 20px;
+ }
+ .NavflexParent{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+  }
+ .mobScren ul{
+  display: flex;
+  justify-content: space-around;
+  gap: 37px;
+ 
+ }
+ .mobScren ul li{
+  padding: 5px 0px;
+  text-transform: capitalize;
+  transition: 0.3s;
+  border-bottom: 2px solid transparent;
+ }
+ .mobScren ul li:hover{
+  border-bottom: 2px solid var(--Icons_color);
+  transform: scale(1.04);
+}
+ 
+
+.btn_ul{
+  display: none;
+}
+ .btns button{
+  background-color: transparent;
+  padding: 10px;
+  border: none;
+  font-size: 15px;
+  text-transform: capitalize;
+  cursor: pointer;
+ }
+ .btns button:hover{
+  transform: scale(1.06);
+ }
+ .btns button:last-child{
+  background-color: rgba(45, 67, 194, 0.885);
+  border-radius: 5px;
+  color: #fff;
+  padding-inline: 20px;
+  transition: 0.5s all;
+ }
+ .btns button:last-child:hover{
+  background-color: rgb(32, 52, 163);
+  
+ }
+ .toggleIcon{
+  font-size: 33px;
+  color: black;
+  cursor: pointer;
+  display: none;
+ }
+ /* =============================================== End navbar section =====================================================  */
+
+/* ================================================ start Home Section =================================================== */
+.home{
+  width: 100%;
+}
+.homeParentLayout{
+    display: grid;
+    grid-template-columns: repeat(7,auto);
+    grid-template-rows: repeat(2,auto);
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0px 0px 0px;
+}
+.homeParentLayout .content {
+
+  grid-column: 1/span 2;
+  line-height: 1.2;
+}
+.homeParentLayout .content h2{font-size: 45px; margin-bottom: 40px;}
+.homeParentLayout .content p{line-height: 1.4; font-size: 17px; color: rgb(97, 97, 97);}
+.homeParentLayout .img{
+  grid-column: 3/span 5;
+  z-index: 1;
+  position: relative;
+}
+.homeParentLayout .img::before{
+  content: "";
+  width: 78%;
+  height: 140%;
+  background: var(--gradint);
+  position: absolute;
+  display: inline-block;
+  z-index: -1;
+  top: -20%;
+  left: 16%;
+  border-radius: 10px;
+}
+.homeParentLayout .img img{
+  width: 100%;
+}
+.homeParentLayout .content .images img{
+  width: 30%;
+  border-radius: 10px;
+  margin: 15px 10px;
+  box-shadow: 0px 0px 15px rgb(134, 134, 134);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.homeParentLayout .content .images img:hover{
+  transform: scale(1.05);
+}
+/* ================================================= end Home Section ===================================================== */
+
+/* ============================================== Start work section =================================================== */
+.work{
+  padding: 60px 0;
+}
+.work .header h2{
+   font-size: 40px;
+   margin-bottom: 60px;
+}
+
+.work-parent-layout{
+  display: grid;
+  grid-template-columns: repeat(auto-fit , minmax(250px,1fr));
+  margin:30px 0px ;
+  justify-content: center;
+  column-gap: 20px;
+}
+
+.work-parent-layout .work-child {
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+line-height: 2;
+
+}
+.work-parent-layout .work-child .card:hover{
+  transition: 0.5s all;
+}
+.work-parent-layout .work-child .card:hover{
+  background-color: var(--Icons_color);
+  color: #fff;
+}
+/* =================================================== end work section ==================================================== */
+
+/* =================================================== Start services ======================================================= */
+.services .content h2{font-size: 37px;}
+.servisParentLayout{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+  align-items: center;
+
+}
+.content-cild{
+  margin: 15px 0px;
+  gap: 20px;
+}
+.content-cild .card{
+  width: 123px;
+}
+.servisParentLayout .image img{
+  width: 90%;
+}
+/* ================================================= End services ========================================================= */
+
+/* =================================================== start EXPERIENCE ====================================================== */
+.EXPERIENCE{
+  padding: 33px;
+}
+.EXPERIENCE .header{
+  line-height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.EXPERIENCE .header .center{max-width: 500px; text-align: center;}
+.EXPERIENCE .header h2{font-size: 37px;}
+
+.EXPERIENCE .content{
+  position: relative;
+  padding: 92px 9px;
+  display: grid;
+  grid-template-columns: repeat(10,auto);
+}
+ .EXPERIENCE .content .left{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  grid-column: 6 / span 4;
+}
+.EXPERIENCE .content .Center_imag{
+  grid-column: 5 / span 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.EXPERIENCE .content .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  grid-column: 1 / span 4;
+
+}
+.flex_center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.EXPERIENCE .content .left .content_child:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.EXPERIENCE .content .Center_imag img{
+  width: 60%;
+}
+/* =================================================== end EXPERIENCE ============================================================== */
+
+/* ===================================================   start Downloud =============================================================*/
+.Download{
+  padding: 60px;
+  margin: 20px 0px;
+}
+.Download_grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  background: var(--gradint);
+  border-radius: 20px;
+  padding: 20px;
+
+}
+.cont{
+  padding: 20px;
+  color: #fff;
+}
+.Download_imges img{
+  width: 25%;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgb(134, 134, 134);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.Download_imges img:hover{
+  transform: scale(1.05);
+}
+.cont h2{font-size: 45px;}
+.cont p{color: white; font-size: 20px; margin: 20px 0px;}
+
+.Download_img{
+  display: flex;
+  position: relative;
+}
+.Download_img img{
+  position: absolute;
+  left: 18%;
+  top: -32%;
+  width: 309px;
+  filter: drop-shadow(0px 4px 10px rgb(79, 79, 79));
+}
+/* ==========================================================   end Downloud ======================================================*/
+
+/* =========================================================== start footer =====================================================  */
+.footer_grid{
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  padding: 70px 0px;
+  margin: 30px 0px;
+}
+.footer_grid ul{
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+.footer_grid ul li{
+  padding: 8px;
+  color: rgb(84, 84, 84);
+  transition: 0.5s all;
+}
+.footer_grid ul li:hover{
+  color: var(--Icons_color);
+  cursor: pointer;
+}
+.boold{
+  font-size: 25px;
+  color: #0f172a;
+  padding: 10px 0px;
+}
+.footer_Down{
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0px;
+}
+.media .child{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 20px #d1d1d1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  margin: 0px 10px;
+  transition: 0.5s all;
+}
+.media .child:hover{
+  background: var(--gradint);
+  color: white;
+  cursor: pointer;
+  transform: scale(1.12);
+}
+ /* ================================================== end footer =========================================================  */
+
+
+ .up-button{
+  position: fixed;
+  border: none;
+  background: var(--gradint);
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  bottom: 4%;
+  right: 3%;
+  animation: bigSmall 2s ease-in-out infinite alternate;
+  cursor: pointer;
+  transition: 1s all;
+  opacity: 0;
+ }
+ .display{
+  opacity: 1;
+ }
+ .up-button:hover{
+  animation-play-state: paused;
+ }
+ .up-button i{
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+ }
+@keyframes bigSmall {
+  to{
+   transform: scale(1.5);
+  }
+}
+/* ================================================== media query ========================================================== */
+
+@media (max-width : 1600px){
+  /* .NavflexParent ul{
+    display: block;
+  } */
+}
+ @media (min-width : 390px) and (max-width : 767px){
+  /* ================================================= nav_section ========================================================== */
+  .toggleIcon{
+    display: block;
+    color: white;
+    align-self: flex-start;
+  }
+  .NavflexParent h2{
+    align-self: flex-start;
+    }
+  .NavflexParent{
+    display: flex;
+    flex-direction: column;
+  }
+  .nave_header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 5;
+  }
+      /******* ul for small screen  ********/
+  .mobScren{
+  
+      transform: translateY(-120%);
+      transition: 1s all;
+      position: absolute;
+      width: 100%;
+      background-color: var(--Icons_color);
+      top: 100%;
+      opacity: 0;
+      left: 0;
+    }
+    .mobScren ul{
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+      } 
+      .mobScren ul li{
+        padding: 5px 0px;
+        text-align: center;
+        border: none;
+      }
+      .mobScren ul li:hover{border: none;}
+      .mobScren ul li a{
+        color: white;
+        }
+    .active{
+      transform: translateY(0%);
+      opacity: 1;
+    }
+    .btn_ul{
+      display: block;
+    }
+  .nav_container{
+    background-color: var(--Icons_color);
+    color: white;
+    padding: 5px 5px;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+  }
+  .NavflexParent .btns{
+    display: none;
+  }
+
+  /* ==================================================== home_section ======================================================== */
+  .homeParentLayout .img{
+    grid-row: 1/span 1;
+    grid-column: 1/span7;
+  }
+  .homeParentLayout .img::before{
+    content: "";
+    width: 105%;
+    height: 100%;
+    background: var(--gradint);
+    position: absolute;
+    z-index: -1;
+    top: -23%;
+    left: -3%;
+    border-radius: 10px 0px;
+  }
+
+  /* ==================================================== Work_section ================================================== */
+   .work .work-parent-layout{
+    gap: 50px;
+   }
+
+  /* ==================================================== services_section ================================================== */
+   .servisParentLayout{
+    gap: 50px;
+   }
+   .servisParentLayout .content-text{
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    padding-top: 18px;
+   }
+
+  /* ==================================================== EXPERIENCE_section ================================================== */
+  .EXPERIENCE .content{
+    grid-template-columns: repeat(4,auto);
+    grid-template-rows: repeat(3, auto);
+    height: 37rem;
+    gap: 0px 17px;
+    padding: 0px;
+  }
+  .EXPERIENCE .content h4{
+    display: none;
+  }
+  .EXPERIENCE .content .left{
+    height: 207%;
+    grid-column: 4 / 6;
+    grid-row: 1 / 2;
+  }
+  .EXPERIENCE .content .Center_imag img{
+    width: 60%;
+    top: 12%;
+    left: 17%;
+     position: absolute;
+     z-index: -1;
+     filter: blur(5px);
+  }
+  .EXPERIENCE .content .right{
+      height: 207%;
+      grid-column: 1 / 3;
+      grid-row: 1 / 2;
+  }
+ 
+/*========================================================== footer ============================================ */
+ .footer_grid{
+  justify-items: start;
+  gap: 40px;
+  padding: 0px 20px;
+ } 
+ .footer_Down{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 270px;
+  }
+  .Down_content p{
+    text-align: center;
+    
+  }
+
+  /*======================================================= Download_section========================================== */
+  .Download{
+    padding: 0;
+    margin-top: 80px;
+  }
+  .Download_img img{
+    display: none;
+  }
+  .Download_img{
+    display: none;
+  }
+  .Download_imges img{
+    width: 37%;
+    margin: 3px;
+  }
+}
